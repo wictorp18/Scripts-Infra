@@ -1,0 +1,9 @@
+enable			Entra no modo privilegiado (admin/root).
+configure terminal	Entra no modo de configuração global.
+hostname 		[NOME]	Define o nome do dispositivo.
+interface 		[TIPO] [NUM]	Entra na configuração de uma porta específica (Ex: int g0/0).
+ip address 		[IP] [MASC]	Atribui o endereço IP e máscara à porta.
+no shutdown			Liga a interface (Cisco vem desligado por padrão).
+show ip interface brief		Mostra o resumo dos IPs e status (UP/DOWN) das portas.
+do write			Salva as configurações na memória permanente.
+show running-config		Mostra toda a configuração atual na tela.
