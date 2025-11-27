@@ -1,0 +1,38 @@
+# Lab 03: Segmentação de Rede (Layer 2)
+# Criação das VLANs 10 (Financeiro) e 20 (Suporte).
+# Portas isoladas para segurança interna.
+
+
+
+Comando				Função						Contexto
+vlan [NUMERO]		Cria uma nova VLAN 				(Ex: vlan 10).	(config)#
+name [NOME]	Dá um nome descritivo para a VLAN.				(config-vlan)#
+switchport mode access	Diz que a porta será usada por um PC/Impressora (apenas 1 VLAN).	(config-if)#
+switchport access vlan [NUM]	Força a porta a pertencer àquela VLAN específica.	(config-if)#
+show vlan brief	O mapa da mina. Mostra quais portas estão em quais VLANs.	Switch#
+
+
+Switch(config)#hostname SW-Andar1
+SW-Andar1(config)#vlan 10
+SW-Andar1(config-vlan)#name FINANCEIRO
+SW-Andar1(config-vlan)#exit
+SW-Andar1(config)#vlan 20
+SW-Andar1(config-vlan)#name SUPORTE
+SW-Andar1(config-vlan)#exit
+SW-Andar1(config)#inter
+SW-Andar1(config)#interface fas
+SW-Andar1(config)#interface fastEthernet 0/1
+SW-Andar1(config-if)#switchport mode access
+SW-Andar1(config-if)#switchport access vlan 10
+SW-Andar1(config-if)#exit
+SW-Andar1(config)#inte
+SW-Andar1(config)#interface fas
+SW-Andar1(config)#interface fastEthernet 0/2
+SW-Andar1(config-if)#switchport mode access
+SW-Andar1(config-if)#switchport access vlan 20
+SW-Andar1(config-if)#exit
+SW-Andar1(config)#show vlan brief
+                   ^
+% Invalid input detected at '^' marker.
+	
+SW-Andar1(config)#exit
