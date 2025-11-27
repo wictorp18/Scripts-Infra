@@ -1,0 +1,7 @@
+Comando,Função,Contexto
+ip dhcp excluded-address [IP],Protege um IP (geralmente o Gateway) para não ser entregue a ninguém.,(config)#
+ip dhcp pool [NOME],Cria um novo escopo de distribuição de IPs.,(config)#
+network [REDE] [MASC],Define qual faixa de IPs será distribuída (Ex: 192.168.1.0).,(config-dhcp)#
+default-router [IP],Informa aos PCs quem é o Gateway (Roteador).,(config-dhcp)#
+dns-server [IP],Informa aos PCs qual DNS usar (Ex: 8.8.8.8).,(config-dhcp)#
+show ip dhcp binding,Comando de Ouro: Mostra a lista de todos os PCs que pegaram IP e seus MAC Addresses.,Router#
