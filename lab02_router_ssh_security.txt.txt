@@ -1,0 +1,5 @@
+username admin secret 5 $1$mERr$5.a6P4JqbNiMX01usIfka/
+
+# Lab 02: Configuração de Hardening (Segurança)
+# Habilitado SSH v2 e desativado Telnet para acesso seguro.
+# Usuário admin configurado.

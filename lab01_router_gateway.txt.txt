@@ -7,3 +7,14 @@ no shutdown			Liga a interface (Cisco vem desligado por padrão).
 show ip interface brief		Mostra o resumo dos IPs e status (UP/DOWN) das portas.
 do write			Salva as configurações na memória permanente.
 show running-config		Mostra toda a configuração atual na tela.
+
+
+
+ip domain-name 				[DOMINIO]	Define o domínio da rede (obrigatório para criar chaves criptográficas).	(config)#
+crypto key generate rsa	Gera as chaves pública/privada para a criptografia do SSH.	(config)#
+
+username 				[USER] secret [SENHA]	Cria um usuário local com senha criptografada.	(config)#
+line vty 0 4				Entra no modo de configuração das 5 linhas de acesso virtual (remoto).	(config)#
+login local				Obriga o roteador a pedir usuário/senha do banco local (que você criou).	(config-line)#
+transport input ssh			A Regra de Ouro: Bloqueia Telnet e só aceita SSH.	(config-line)#
+ssh -l [USER] [IP]			Comando (no PC/Linux) para conectar no roteador.	Terminal do PC
